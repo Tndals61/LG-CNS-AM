@@ -1,0 +1,22 @@
+<style>
+    body {
+        background-color: skyblue;
+    }
+    @media print {
+        p{
+            color: red;
+            font-size: 3rem;
+        }
+        
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: yellow;
+        }
+    }
+</style>
+
+<body>
+    <p>브라우저의 너비가 600 픽셀 이하에서는 배경 색상이 노란색으로 변경된다. </p>
+</body>

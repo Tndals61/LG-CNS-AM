@@ -1,0 +1,26 @@
+<body>
+    <div>
+
+    </div>
+    
+    <script>
+        let url = "https://api.themoviedb.org/3/search/movie?api_key=cba95d401a14ab806ffc13a5052aab89&query=부산";
+        //비동기/논블럭킹 방식으로 동작
+        async function run() {
+            const res = await fetch(url);
+            const data = await res.json()
+            
+            const results = data.results;
+            let html = ''
+            results.forEach((v) => {
+                //v는 객체
+                let title = v.original_title
+                html += `<h2>${title}</h2>`
+            });
+            document.querySelector('div').innerHTML = html;
+        }
+        
+        run();
+
+    </script>
+</body>

@@ -1,0 +1,20 @@
+<body>
+    <script>
+        let con = true;
+        let num = 5;
+
+        while (con) {
+            let user = prompt("숫자를 입력하세요. (범위 1~10)");
+            
+            if (user == num) {
+                con = false;
+            } else if (user < num) {
+                alert("더 큰 수를 입력하세요!")
+            } else {
+                alert("더 작은 수를 입력하세요!")
+            }
+
+            
+        }
+    </script>
+</body>

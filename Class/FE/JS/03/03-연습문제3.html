@@ -1,0 +1,15 @@
+<body>
+    <script>
+        let num = 12345;
+        let cnt = 0;
+
+        cnt = cnt + num % 10
+        cnt = cnt + parseInt(num/10) % 10
+        cnt = cnt + parseInt(num/100) % 10
+        cnt = cnt + parseInt(num/1000) % 10
+        cnt = cnt + parseInt(num/10000) % 10
+
+        console.log(cnt);
+        
+    </script>
+</body>

@@ -1,0 +1,58 @@
+<body>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+        div > div {
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #zero {
+            grid-column: 1/ 4;
+        }
+    </style>
+
+    <div class="wrapper">
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div id="zero">0</div>
+    </div>
+    <h1></h1>
+    <button onclick="back()">Back</button>
+
+    <script>
+
+        const btns = document.querySelectorAll('div > div');
+        for (const btn of btns) {
+            // 클릭된 div의 text를 h1에 추가
+            btn.addEventListener('click', (event) => {
+                const text = event.target.innerHTML;
+                document.querySelector('h1').innerHTML += text;
+            });
+        }
+
+        /* Back 버튼 기능 구현 */
+        function back() {
+            // 코드 작성
+            let h1 = document.querySelector('h1').innerHTML;
+            strLength = h1.length;
+            h1 = h1.substring(0, strLength - 1);
+
+            document.querySelector('h1').innerHTML = h1;
+            
+        }
+    </script>
+
+</body>
