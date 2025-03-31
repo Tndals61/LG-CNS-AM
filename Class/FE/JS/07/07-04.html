@@ -1,0 +1,12 @@
+<body>
+    <script>
+        const h1 = document.createElement('h1'); //element node 만들어주기
+        const text = document.createTextNode("제목"); //text 만들어주기
+        
+        h1.appendChild(text);
+        document.body.appendChild(h1);
+
+        document.body.innerHTML += '<h1>제목2</h1>';
+
+    </script>
+</body>

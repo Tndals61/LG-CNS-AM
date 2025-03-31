@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <script>
+            const h1 = (text) => `<h1>${text}</h1>`;
+        </script>
+        <script>
+            // document.addEventListener('DOMContentLoaded', () => {
+            //     document.body.innerHTML += h1('h1 태그 추가');
+            // });
+        </script>
+    </head>
+    <body>
+        <h1>h1 태그</h1>
+        <script>
+            const h = document.querySelector('h1')
+            h.addEventListener('click', () => {
+                h.style.backgroundColor = 'red';
+            });
+            document.addEventListener('resize', ()=> {
+                console.log('resize');
+            });
+        </script>
+    </body>
+</html>

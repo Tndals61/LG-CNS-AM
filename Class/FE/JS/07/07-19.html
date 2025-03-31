@@ -1,0 +1,13 @@
+<body>
+    <script>
+        document.cookie = "name=hong";
+        console.log(document.cookie);
+
+        const date = new Date();
+        date.setHours(date.getHours() + 1);
+        console.log(date);
+        console.log(date.toUTCString());
+        document.cookie = "name2=hong2;expires=" + date.toUTCString();
+        
+    </script>
+</body>

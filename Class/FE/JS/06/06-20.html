@@ -1,0 +1,15 @@
+<body>
+    <div></div>
+    
+    <script>
+        const arr = [1, 2, 3, 4, 5];
+        const arr2= arr.map((v) => {
+            return `<p>${v}</p>`;
+        })
+        console.log(arr2);
+        arr2.forEach((v)=> {
+            document.querySelector('div').innerHTML += v;
+        })
+        
+    </script>
+</body>
