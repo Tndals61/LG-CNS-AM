@@ -10,6 +10,12 @@
             
         });
 
+        input.addEventListener('blur', (e) => {
+            if (e.target.value === '#') {
+                e.target.value = '';
+            }
+        });
+
         input.addEventListener('keyup', (e) => {
             let search = event.target.value;        
             if (e.keyCode === 32) {

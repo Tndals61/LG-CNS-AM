@@ -1,0 +1,36 @@
+<body>
+    거스름 돈: <input type="text">원
+        <button>계산</button>
+        <p></p>
+
+    <script>
+        let num_500 = 0;
+        let num_100 = 0;
+        let num_50 = 0;
+        let num_10 = 0;
+
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+
+        button.addEventListener('click', () => {
+            let change = input.value;
+            if (change%10 > 0) {
+                alert("계산 할 수 없습니다!")
+            } else {
+                num_500 = parseInt(change / 500); 
+                change -= num_500*500;
+                num_100 = parseInt(change / 100); 
+                change -= num_100*100;
+                num_50 = parseInt(change / 50); 
+                change -= num_50*50;
+                num_10 = parseInt(change / 10); 
+                change -= num_10*10;
+                
+                p.innerHTML = `잔돈은: 500원 ${num_500}개, 100원 ${num_100}개, 50원 ${num_50}개, 10원 ${num_10}개 입니다.`
+
+            }
+
+        })
+    </script>
+</body>
