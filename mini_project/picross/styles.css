@@ -18,6 +18,8 @@ h1 {
 
 #game-board {
     display: grid;
+    grid-template-columns: auto repeat(5, 40 px);
+    grid-template-rows:  auto repeat(5,40px);
     gap: 2px; /* 셀 사이 간격 */
 }
 
@@ -40,4 +42,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hint-row, .hint-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
 }
